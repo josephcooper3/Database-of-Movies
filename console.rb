@@ -14,6 +14,12 @@ movie1 = Movie.new({
 })
 movie1.save()
 
+movie2 = Movie.new({
+  "title" => "Trainspotting",
+  "genre" => "Black-Comedy"
+  })
+movie2.save()
+
 star1 = Star.new({
   "first_name" => "Ewan",
   "last_name" => "McGregor"
@@ -26,6 +32,13 @@ casting1 = Casting.new({
   "star_id" => star1.id
 })
 casting1.save()
+
+casting2 = Casting.new({
+  "fee" => "200000",
+  "movie_id" => movie2.id,
+  "star_id" => star1.id
+})
+casting2.save()
 
 binding.pry
 nil
